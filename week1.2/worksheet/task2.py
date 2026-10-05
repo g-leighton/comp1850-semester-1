@@ -14,7 +14,8 @@ try:
 
     if len(numbers) % 2 == 0:
         mid_index = int(len(numbers) / 2)
-        med = numbers[mid_index] - 0.5
+        med = (numbers[mid_index] + numbers[mid_index - 1]) / 2
+        #print(mid_index)
 
     else:
         mid_index = int((len(numbers) / 2) - 0.5)
