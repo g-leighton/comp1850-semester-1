@@ -40,6 +40,7 @@ while systime <= maxtime:
 
             if clock == (states["red"] + states["red_amber"] + states["green"] + states["amber"] - 1):
                 clock = 0
+                print(f"Clock: {clock}")
 
             else:
                 clock += 1
