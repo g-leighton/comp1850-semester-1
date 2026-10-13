@@ -15,20 +15,49 @@ print(f"Time {systime:03} State {state}")
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
-time = 0
-while time <= maxtime:
-    """ for i in range (maxtime):
-        if i <= 3:
-            state = red
-        elif """
-    if time <= 3:
-        state = red
-    elif time > 3 and time <= 6:
-        state = red_amber
-    elif time > 6 and time <= 1
-    print(f"Time {systime:03} State {state}")
-    systime += 1
-    time += 1
+while systime <= maxtime:
+    
+    for clock in range (states["red"] + states["red_amber"] + states["green"] + states["amber"]):
+        print(f"Clock: {clock}")
+        if clock <= (states["red"] - 1):
+            state = "red"
+            print(f"Time {systime:03} State {state}")
+            clock += 1
+        
+        elif clock > (states["red"] - 1) and clock <= (states["red"] + states["red_amber"] - 1):
+            state = "red_amber"
+            print(f"Time {systime:03} State {state}")
+            clock += 1
+
+        elif clock > (states["red"] + states["red_amber"] - 1) and clock <= (states["red"] + states["red_amber"] + states["green"] - 1):
+            state = "green"
+            print(f"Time {systime:03} State {state}")
+            clock += 1
+        
+        elif clock > (states["red"] + states["red_amber"] + states["green"] - 1) and clock <= (states["red"] + states["red_amber"] + states["green"] + states["amber"] - 1):
+            state = "amber"
+            print(f"Time {systime:03} State {state}")
+
+            if clock == (states["red"] + states["red_amber"] + states["green"] + states["amber"] - 1):
+                clock = 0
+
+            else:
+                clock += 1
+        
+        systime += 1
+    
+    
+
+
+""" for time in range (maxtime):
+    timer = 0
+    while systime < maxtime: 
+        print(f"Time {systime:03} State {state}")
+    
+        systime += 1
+
+    state = states[timer] !!
+    time += 1 """
     
 
 
