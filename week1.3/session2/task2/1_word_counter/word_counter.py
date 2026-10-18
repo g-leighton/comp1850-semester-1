@@ -5,6 +5,15 @@
 
 # open and read the file
 
+with open ("/workspaces/comp1850-semester-1/week1.3/session2/task2/1_word_counter/glasses.txt", "r") as infile:
+    count = 0
+    words = infile.read()
+    word_count = words.split()
+    count += len(word_count)
+
+print(count)
+
+
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings
