@@ -21,11 +21,11 @@ class Person:
         if name == "":
             raise ValueError("Name cannot be empty.")
         
-        if not isinstance(birth, (datetime.date)):
+        if not isinstance(birth, (date)):
             raise TypeError("Date must be a date object.")
         
         self.name = name
-        self.date = date
+        self.birth = birth
 
     # Implement methods initials() and is_birthday() here
     # (see README.md for further details)
@@ -36,10 +36,23 @@ class Person:
         '''
 
         initials_list = ""
-        for i in self.name:
+        for i in range(0, len(self.name)):
             if self.name[i].isupper():
                 initials_list += self.name[i]
         
         return initials_list
 
-    
+    def is_birthday(self):
+        '''
+        Checks if today is the persons birthday.
+        '''
+
+        if date.today() == self.birth:
+            return "True"
+        else:
+            return "False"
+
+""" test = Person("George Leighton", date.today())
+
+print(test.initials())
+print(test.is_birthday()) """
