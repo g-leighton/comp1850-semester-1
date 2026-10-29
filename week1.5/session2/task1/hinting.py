@@ -32,5 +32,7 @@ class Point:
 
 # Test program
 
-p = Point("two", "one")
+p = Point(3, 4)
+p1 = Point(7, 8)
 print(p.distance())
+print(p.distance_to(p1))
