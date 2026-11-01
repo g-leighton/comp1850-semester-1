@@ -1,6 +1,7 @@
 # Worksheet 1.5: Person class
 
 from datetime import date
+import datetime as dt
 
 class Person:
     """
@@ -36,9 +37,8 @@ class Person:
         '''
 
         initials_list = ""
-        for i in range(0, len(self.name)):
-            if self.name[i].isupper():
-                initials_list += self.name[i]
+        for i in self.name.split():
+            initials_list += i[0].upper()
         
         return initials_list
 
@@ -48,11 +48,12 @@ class Person:
         '''
 
         if date.today() == self.birth:
-            return "True"
+            return True
         else:
-            return "False"
+            return False
 
-""" test = Person("George Leighton", date.today())
-
+'''
+test = Person("george william leighton", date.today())
+print(date.today())
 print(test.initials())
-print(test.is_birthday()) """
+print(test.is_birthday()) '''

@@ -31,7 +31,7 @@ class Rectangle:
         if self.width == self.height:
             return 'True'
         else:
-            return 'False'
+            return False
 
     def area(self):
         '''
@@ -48,8 +48,9 @@ class Rectangle:
         return ((self.width * 2) + (self.height * 2))
     # (See README.md for details of what they should do)
 
-""" rectangle_test = Rectangle(3, 5)
+'''
+rectangle_test = Rectangle(4, 3)
 
 print(rectangle_test.is_square())
 print(rectangle_test.area())
-print(rectangle_test.perimeter()) """
+print(rectangle_test.perimeter()) '''
