@@ -47,7 +47,7 @@ class Person:
         Checks if today is the persons birthday.
         '''
 
-        if date.today() == self.birth:
+        if self.birth == date.today():
             return True
         else:
             return False

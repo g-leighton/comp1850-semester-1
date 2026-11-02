@@ -42,6 +42,11 @@ class QuakeDataset:
         # each dictionary and convert them into the required types before
         # creating a Quake object and storing it in the list.
 
+        reader = feed.reader()
+        for line in reader:
+            print(line)
+
+
     def __len__(self):
         """
         Returns the size of this dataset.
