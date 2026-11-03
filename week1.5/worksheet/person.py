@@ -41,16 +41,20 @@ class Person:
             initials_list += i[0].upper()
         
         return initials_list
+    
+    def __eq__(self, today):
+        if isinstance(today, date):
+            return self.birth == today
+        
+        else:
+            return False
 
     def is_birthday(self):
         '''
         Checks if today is the persons birthday.
         '''
 
-        if self.birth == date.today():
-            return True
-        else:
-            return False
+        return self.__eq__(date.today())
 
 '''
 test = Person("george william leighton", date.today())
