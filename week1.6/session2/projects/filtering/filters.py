@@ -1,7 +1,7 @@
-import image
+from image import Image
 
 def blur(img):
-    blurred = Image.create(img.width, img.height, 0, img.max_value)
+    blurred = Image.create(img.width, img.height)
     for row in range(1, img.height - 1):
         for col in range(1, img.width - 1):
            
@@ -14,5 +14,6 @@ def blur(img):
             average_value = sum(pixel_group) // len(pixel_group)
             
             blurred.set(row, col, average_value)
+            
     return blurred
             
