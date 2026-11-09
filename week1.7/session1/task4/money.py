@@ -1,4 +1,5 @@
 # from Week 1.5, Session 2: Task 3
+import pytest
 
 class Money:
     """
@@ -42,3 +43,5 @@ class Money:
         sum_pence = (self.pence + other.pence) % 100
 
         return Money(sum_pounds + extra_pound, sum_pence)
+
+    
