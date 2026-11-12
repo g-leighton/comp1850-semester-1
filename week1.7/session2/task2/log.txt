@@ -1,0 +1,2 @@
+INFO:root:calculate_average(): started
+INFO:root:Calculated average as: 87

@@ -16,8 +16,8 @@ def calculate_average(scores):
     total_assignments = len(scores)
     
     # add debug logging here
-    
     average = total_score // total_assignments
+    logger.info(f"Calculated average as: {average}")
     
     # add a debug logging here
     
