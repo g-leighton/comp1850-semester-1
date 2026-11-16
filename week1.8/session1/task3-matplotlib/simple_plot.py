@@ -16,3 +16,4 @@ plt.show()  # display
 # - Plot in different ways
 # Read matplotlib documentation
 # - Test some other plotting functions
+
