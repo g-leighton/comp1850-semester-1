@@ -12,3 +12,6 @@
 
 -- And to see a count of the total number of tuples
 SELECT COUNT(*) as Cardinality FROM customers; 
+
+-- SELECT COUNT(*) from customers;
+-- .schema customers
